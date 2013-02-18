@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
 	def index
 
-		@squash = "Hey guys!"
+		@squash = "Hey guy!"
 
 	end
 end
