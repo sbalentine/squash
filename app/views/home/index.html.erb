@@ -1,1 +1,18 @@
-<%= @squash %>
+<form action="/item" method="post"> 
+	<input name="text" type="text"> </input>
+	<input type="submit"></input>
+</form>
+
+<ul>
+
+<% @items.each do |item| %>
+
+	<li> <%= item.text %> </li>
+	<form action="/delete" method="post"> 
+		<input type="submit" value="Delete"></input>
+		<input type="hidden" name="id" value=<%= item.id %>> </input>
+	</form>
+
+<% end %>
+
+</ul>
